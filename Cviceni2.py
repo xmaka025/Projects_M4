@@ -34,5 +34,5 @@ if __name__ == "__main__":
     test = ["([]{})", "([)]", "{[}]", "()"]
 
     for test in test:
-        result = "Правильная" if valid_bracket(test) else "Неправильная"
-        print(f"Строка '{test}': {result}")
+        result = "Right" if valid_bracket(test) else "Wrong"
+        print(f"The line '{test}' is  {result}")
