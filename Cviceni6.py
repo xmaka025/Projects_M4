@@ -18,17 +18,19 @@ class Graph:
         self._root = root
 
     def dfs(self):
-        def dfs1(node, visitor):
-            visitor.add(node)
-            print(node.value)
-
-            for neighbor in node.outbound:
-                if neighbor not in visitor:
-                    dfs1(neighbor, visitor)
-
         visited = set()
-        dfs1(self._root, visited)
-        return [node.value for node in visited]
+        result = []
+
+        def dfs1(node):
+            visited.add(node)
+            print(node.value)
+            result.append(node.value)
+            for neighbor in node.outbound:
+                if neighbor not in visited:
+                    dfs1(neighbor)
+
+        dfs1(self._root)
+        return result
 
 
 a = Node('a')
