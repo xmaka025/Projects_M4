@@ -22,9 +22,9 @@ class Graph:
             visitor.add(node)
             print(node.value)
 
-            for sosed in node.outbound:
-                if sosed not in visitor:
-                    dfs1(sosed, visitor)
+            for neighbor in node.outbound:
+                if neighbor not in visitor:
+                    dfs1(neighbor, visitor)
 
         visited = set()
         dfs1(self._root, visited)
