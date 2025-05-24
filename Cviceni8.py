@@ -48,3 +48,4 @@ def selection_sort(arr):
 my_list = [64, 34, 25, 12, 22, 11, 90, 0]
 selection_sort(my_list)
 print("Отсортированный список:", my_list)
+
